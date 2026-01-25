@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jai Guru Dev Spun Pipe - RCC Pipe Manufacturer Rewari | ISO Certified</title>
-    <meta name="description" content="ISO 9001:2015 certified RCC Spun Pipe manufacturer in Rewari. Best prices for Delhi NCR, Haryana, Rajasthan. Call +91 98765 43210">
+    <title>Jai Guru Dev Spun Pipe - Premium RCC Pipe Manufacturer | ISO 9001:2015 Certified</title>
+    <meta name="description" content="Leading ISO 9001:2015 certified manufacturer of RCC Spun Pipes, Hume Pipes & Concrete Products in Rewari. Serving Delhi NCR, Haryana & Rajasthan.">
+    <meta name="keywords" content="RCC Pipes Rewari, Spun Pipe Manufacturer, Concrete Pipes, Hume Pipes, Delhi NCR, Haryana, Rajasthan">
     <style>
         * {
             margin: 0;
@@ -12,415 +13,1664 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e293b;
+            --accent-color: #f59e0b;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
+            color: var(--gray-800);
+            overflow-x: hidden;
         }
 
-        .top-bar {
-            background: #1a1a1a;
-            color: white;
-            padding: 10px 0;
-            font-size: 14px;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .top-bar .container {
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        /* Utility Classes */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 14px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .top-bar-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .top-bar a {
-            color: white;
+        .top-bar-left {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
             text-decoration: none;
-            margin-right: 20px;
+            transition: color 0.3s;
         }
 
-        .iso {
-            background: #ff6b35;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: bold;
+        .top-bar-item:hover {
+            color: var(--accent-color);
+        }
+
+        .top-bar-item i {
+            font-size: 16px;
+        }
+
+        .iso-badge {
+            background: linear-gradient(135deg, var(--accent-color), #f97316);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: 700;
             font-size: 12px;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+            animation: pulse 2s infinite;
         }
 
+        /* Header & Navigation */
         header {
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: var(--white);
+            box-shadow: var(--shadow-md);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow-lg);
         }
 
         nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
+            padding: 18px 0;
+        }
+
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #ff6b35;
-        }
-
-        .logo small {
-            display: block;
-            font-size: 11px;
-            color: #666;
-            font-weight: normal;
-        }
-
-        .nav-links {
+        .logo-container {
             display: flex;
-            gap: 30px;
-            list-style: none;
+            align-items: center;
+            gap: 15px;
         }
 
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .cta-btn {
-            background: #ff6b35;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 5px;
-            text-decoration: none;
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--white);
             font-weight: bold;
+            box-shadow: var(--shadow-md);
         }
 
-        .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 60px 20px;
+        .logo-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .hero-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
+        .logo-main {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-main span {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 11px;
+            color: var(--gray-500);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 35px;
             align-items: center;
         }
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-            line-height: 1.2;
+        .nav-menu li a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            position: relative;
+            padding: 8px 0;
         }
 
-        .hero-highlight {
-            color: #fbbf24;
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
         }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-            opacity: 0.95;
+        .nav-menu li a:hover {
+            color: var(--primary-color);
         }
 
-        .hero-btns {
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
             display: flex;
             gap: 15px;
         }
 
         .btn {
-            padding: 14px 30px;
-            border-radius: 5px;
+            padding: 12px 28px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
             display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-align: center;
         }
 
         .btn-primary {
-            background: #ff6b35;
-            color: white;
+            background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-secondary {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
         }
 
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
         }
 
-        .stats {
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent-color), #f97316);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-success {
+            background: var(--success-color);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--gray-700);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1000" height="1000" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            color: var(--white);
         }
 
-        .stat {
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, #60a5fa, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            color: var(--gray-300);
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-color), #f97316);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .hero-feature-text {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            padding: 15px;
+            transition: all 0.3s;
         }
 
-        .stat-num {
-            font-size: 36px;
-            font-weight: bold;
-            color: #ff6b35;
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            font-size: 13px;
-            color: #666;
+            font-size: 14px;
+            color: var(--gray-300);
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .main-section {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
+        /* Floating Badges */
+        .floating-badges {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 2;
         }
 
-        .products {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+        .floating-badge {
+            background: var(--white);
+            padding: 12px 20px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-xl);
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--primary-color);
+            animation: bounce 3s infinite;
         }
 
-        .product {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--white);
+            padding: 40px 0;
+            box-shadow: var(--shadow-md);
         }
 
-        .product:hover {
-            transform: translateY(-5px);
+        .trust-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
-        .product-head {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 20px;
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--white);
+        }
+
+        .trust-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
             text-align: center;
         }
 
-        .product h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: var(--white);
         }
 
-        .price {
-            font-size: 28px;
-            font-weight: bold;
-            color: #fbbf24;
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
         }
 
-        .price span {
+        .section-subtitle {
+            color: var(--primary-color);
             font-size: 14px;
-        }
-
-        .product-body {
-            padding: 20px;
-        }
-
-        .specs {
-            list-style: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 15px;
         }
 
-        .specs li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+        .section-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .about-text p strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .highlight-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-3px);
+        }
+
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .highlight-content h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .highlight-content p {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .about-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .about-image-item {
+            background: var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 100%;
+        }
+
+        .about-image-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-image-item:nth-child(1)::after {
+            content: '🏭';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+        }
+
+        .about-image-item:nth-child(2)::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+        }
+
+        .about-image-item:nth-child(3)::after {
+            content: '🚚';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+        }
+
+        .about-image-item:nth-child(4)::after {
+            content: '💪';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--gray-700));
+            color: var(--white);
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .product-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin: 0 auto 20px;
+        }
+
+        .product-header h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .product-body {
+            padding: 30px 25px;
+        }
+
+        .product-specs {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .product-specs li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--gray-200);
             display: flex;
             justify-content: space-between;
-            font-size: 14px;
+            align-items: center;
+            font-size: 15px;
         }
 
-        .specs li:last-child {
-            border: none;
+        .product-specs li:last-child {
+            border-bottom: none;
         }
 
-        .quote-btn {
-            width: 100%;
-            text-align: center;
-            background: #ff6b35;
-            color: white;
-            padding: 12px;
-            border-radius: 5px;
-            text-decoration: none;
+        .spec-label {
+            color: var(--gray-600);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .spec-label::before {
+            content: '•';
+            color: var(--primary-color);
+            font-size: 20px;
             font-weight: bold;
-            display: block;
         }
 
-        .contact-section {
-            background: #f8f9fa;
-            padding: 50px 20px;
+        .spec-value {
+            color: var(--secondary-color);
+            font-weight: 700;
         }
 
-        .contact-grid {
-            max-width: 1200px;
-            margin: 0 auto;
+        .product-features {
+            background: var(--gray-100);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .product-features h4 {
+            font-size: 14px;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .feature-list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--gray-700);
+        }
+
+        .feature-list-item::before {
+            content: '✓';
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .product-footer {
+            padding: 0 25px 30px;
+        }
+
+        .product-cta {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* Applications Section */
+        .applications-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .applications-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .application-card {
+            text-align: center;
+            padding: 40px 25px;
+            background: var(--gray-100);
+            border-radius: 16px;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .application-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .application-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .application-card:hover::before {
+            opacity: 1;
+        }
+
+        .application-card:hover .application-icon,
+        .application-card:hover h3,
+        .application-card:hover p {
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .application-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            transition: all 0.4s;
+        }
+
+        .application-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            transition: all 0.4s;
+        }
+
+        .application-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            transition: all 0.4s;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--gray-800) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="1000" height="1000" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .why-choose-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 25px;
+            transition: all 0.4s;
+        }
+
+        .feature-card:hover .feature-card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Quality Standards Section */
+        .quality-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .quality-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .quality-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .quality-item {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .quality-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .quality-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .quality-text h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .quality-text p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .certification-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 35px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .certification-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .certification-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .certification-card p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+
+        .process-timeline {
+            position: relative;
+            margin-top: 60px;
+            padding: 40px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gray-300);
+            transform: translateY(-50%);
+        }
+
+        .timeline-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 100%;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 100px;
+            height: 100px;
+            background: var(--white);
+            border: 5px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s;
+        }
+
+        .process-step:hover .step-circle {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .step-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .process-step:hover .step-number {
+            color: var(--white);
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 13px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-white:hover {
+            background: var(--gray-100);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             font-weight: 600;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
+            color: var(--secondary-color);
             font-size: 15px;
         }
 
-        .form-group textarea {
+        .form-group label span {
+            color: var(--danger-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-control-textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 120px;
         }
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .contact-info {
+        .contact-info-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
-        .info-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #ff6b35;
+        .contact-info-card {
+            background: linear-gradient(135deg, var(--gray-100), var(--white));
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s;
         }
 
-        .info-box h4 {
-            color: #1e3a8a;
-            margin-bottom: 10px;
-            font-size: 16px;
+        .contact-info-card:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .info-box p {
-            color: #666;
-            margin: 0;
-            font-size: 14px;
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
         }
 
-        .info-box a {
-            color: #ff6b35;
+        .info-card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .info-card-content {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        .info-card-content a {
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s;
         }
 
+        .info-card-content a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
         footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 80px 0 0;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-main {
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 50px;
+        }
+
+        .footer-about h3 {
+            font-size: 24px;
+            font-weight: 800;
             margin-bottom: 20px;
-            text-align: left;
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-about p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--gray-400);
+            margin-bottom: 25px;
+        }
+
+        .footer-certifications {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .footer-section h4 {
-            color: #fbbf24;
-            margin-bottom: 15px;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--accent-color);
         }
 
-        .footer-section ul {
+        .footer-links {
             list-style: none;
         }
 
-        .footer-section ul li {
-            margin-bottom: 8px;
-            font-size: 14px;
+        .footer-links li {
+            margin-bottom: 12px;
         }
 
-        .footer-section a {
-            color: #ccc;
+        .footer-links a {
+            color: var(--gray-400);
             text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 8px;
         }
 
         .footer-bottom {
-            border-top: 1px solid #333;
-            padding-top: 20px;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-500);
             font-size: 14px;
-            color: #999;
         }
 
-        .section-title {
-            font-size: 32px;
-            color: #1e3a8a;
-            margin-bottom: 10px;
-            text-align: center;
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
         }
 
-        @media (max-width: 768px) {
-            .hero-grid,
-            .products,
-            .contact-grid,
-            .footer-content {
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
                 grid-template-columns: 1fr;
             }
 
-            .stats {
+            .about-content,
+            .quality-content {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero h1 {
-                font-size: 28px;
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .nav-links {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                gap: 15px;
             }
 
-            .form-grid {
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .products-grid,
+            .applications-grid,
+            .features-grid,
+            .process-steps {
                 grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-form-wrapper {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -429,220 +1679,822 @@
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
-            <div>
-                <a href="tel:+919876543210">📞 +91 98765 43210</a>
-                <a href="mailto:sales@jaigurudevspunpipe.com">✉️ sales@jaigurudevspunpipe.com</a>
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <a href="tel:+919876543210" class="top-bar-item">
+                        <span>📞</span>
+                        <span>+91 98765 43210</span>
+                    </a>
+                    <a href="mailto:sales@jaigurudevspunpipe.com" class="top-bar-item">
+                        <span>✉️</span>
+                        <span>sales@jaigurudevspunpipe.com</span>
+                    </a>
+                </div>
+                <div>
+                    <span class="iso-badge">ISO 9001:2015 CERTIFIED</span>
+                </div>
             </div>
-            <span class="iso">ISO 9001:2015 CERTIFIED</span>
         </div>
     </div>
 
     <!-- Header -->
-    <header>
+    <header id="header">
         <nav>
-            <div class="logo">
-                JAI GURU DEV SPUN PIPE
-                <small>Quality RCC Products Since 2020</small>
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo-container">
+                        <div class="logo-icon">JG</div>
+                        <div class="logo-text">
+                            <div class="logo-main">JAI GURU DEV <span>SPUN PIPE</span></div>
+                            <div class="logo-tagline">QUALITY RCC PRODUCTS SINCE 2020</div>
+                        </div>
+                    </div>
+
+                    <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#quality">Quality</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-cta">
+                        <a href="tel:+919876543210" class="btn btn-primary">Call Now</a>
+                        <a href="#contact" class="btn btn-accent">Get Quote</a>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="cta-btn">Get Quote</a>
         </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-grid">
-            <div>
-                <h1>Premium <span class="hero-highlight">RCC Spun Pipes</span> Manufacturer</h1>
-                <p>ISO Certified | Best Prices in Delhi NCR, Haryana & Rajasthan | Timely Delivery Guaranteed</p>
-                <div class="hero-btns">
-                    <a href="tel:+919876543210" class="btn btn-primary">Call Now</a>
-                    <a href="https://wa.me/919876543210" class="btn btn-whatsapp">WhatsApp</a>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-num">500+</div>
-                    <div class="stat-label">Projects</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num">250+</div>
-                    <div class="stat-label">Clients</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">Quality</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num">5+</div>
-                    <div class="stat-label">Years</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Premium <span class="hero-highlight">RCC Spun Pipes</span> Manufacturer in Rewari</h1>
+                    <p>ISO 9001:2015 Certified Excellence | Serving Delhi NCR, Haryana & Rajasthan | Trusted by 500+ Infrastructure Projects</p>
 
-    <!-- Products -->
-    <section class="main-section" id="products">
-        <h2 class="section-title">Our Products & Prices</h2>
-        <p class="section-subtitle">Premium Quality RCC Pipes - Best Rates in North India</p>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">✓</div>
+                            <div class="hero-feature-text">ISI Certified Products</div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">🏭</div>
+                            <div class="hero-feature-text">Modern Manufacturing</div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">🚚</div>
+                            <div class="hero-feature-text">Timely Delivery</div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">💰</div>
+                            <div class="hero-feature-text">Best Market Rates</div>
+                        </div>
+                    </div>
 
-        <div class="products">
-            <div class="product">
-                <div class="product-head">
-                    <h3>RCC Spun Pipe (NP2)</h3>
-                    <div class="price">₹270<span>/Meter</span></div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-accent">Request Quote</a>
+                        <a href="https://wa.me/919876543210" class="btn btn-success">WhatsApp Us</a>
+                        <a href="tel:+919876543210" class="btn btn-secondary">Call Now</a>
+                    </div>
                 </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Diameter:</span> <strong>200-1200mm</strong></li>
-                        <li><span>Length:</span> <strong>2.5 - 3.0m</strong></li>
-                        <li><span>Use:</span> <strong>Drainage</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
-                </div>
-            </div>
 
-            <div class="product">
-                <div class="product-head">
-                    <h3>RCC Spun Pipe (NP3)</h3>
-                    <div class="price">₹320<span>/Meter</span></div>
-                </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Diameter:</span> <strong>200-1400mm</strong></li>
-                        <li><span>Length:</span> <strong>2.5 - 3.0m</strong></li>
-                        <li><span>Use:</span> <strong>Water Supply</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-head">
-                    <h3>RCC Spun Pipe (NP4)</h3>
-                    <div class="price">₹420<span>/Meter</span></div>
-                </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Diameter:</span> <strong>300-1800mm</strong></li>
-                        <li><span>Length:</span> <strong>2.5 - 3.0m</strong></li>
-                        <li><span>Use:</span> <strong>Heavy Duty</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-head">
-                    <h3>RCC Hume Pipes</h3>
-                    <div class="price">₹190<span>/Meter</span></div>
-                </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Diameter:</span> <strong>150-1000mm</strong></li>
-                        <li><span>Type:</span> <strong>Socket & Spigot</strong></li>
-                        <li><span>Use:</span> <strong>Storm Water</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-head">
-                    <h3>Jacking Pipes</h3>
-                    <div class="price">₹6,000<span>/Meter</span></div>
-                </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Diameter:</span> <strong>600-2400mm</strong></li>
-                        <li><span>Feature:</span> <strong>High Axial Load</strong></li>
-                        <li><span>Use:</span> <strong>Tunneling</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-head">
-                    <h3>Manhole Covers</h3>
-                    <div class="price">₹1,500<span>/Piece</span></div>
-                </div>
-                <div class="product-body">
-                    <ul class="specs">
-                        <li><span>Size:</span> <strong>600mm, 900mm</strong></li>
-                        <li><span>Type:</span> <strong>SFRC/RCC</strong></li>
-                        <li><span>Use:</span> <strong>Road/Drain</strong></li>
-                    </ul>
-                    <a href="#contact" class="quote-btn">Get Quote</a>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Quality Assured</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">🏆</div>
+                    <div class="trust-text">ISO 9001:2015<br>Certified</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">✓</div>
+                    <div class="trust-text">BIS Approved<br>Products</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🚚</div>
+                    <div class="trust-text">Pan India<br>Delivery</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💯</div>
+                    <div class="trust-text">100% Quality<br>Guarantee</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⏰</div>
+                    <div class="trust-text">24/7 Customer<br>Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">About Our Company</div>
+                <h2 class="section-title">Leading RCC Pipe Manufacturer Since 2020</h2>
+                <p class="section-description">Delivering superior quality reinforced concrete cement pipes and concrete products with cutting-edge technology and unwavering commitment to excellence.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Partner in Quality Infrastructure</h3>
+                    <p><strong>Jai Guru Dev Spun Pipe</strong> stands as a premier manufacturer of RCC Spun Pipes, Hume Pipes, and comprehensive concrete products in Rewari, Haryana. Since our establishment in 2020, we have rapidly evolved into a trusted name across Delhi NCR, Haryana, and Rajasthan regions.</p>
+                    <p>Our state-of-the-art manufacturing facility is equipped with advanced spinning technology that ensures uniform concrete distribution, superior strength, and exceptional durability. We maintain strict adherence to <strong>ISO 9001:2015</strong> quality management systems and BIS standards.</p>
+                    <p>We proudly serve diverse sectors including government infrastructure projects, private construction companies, agricultural irrigation systems, municipal water supply networks, and industrial drainage solutions.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🏭</div>
+                            <div class="highlight-content">
+                                <h4>Modern Facility</h4>
+                                <p>Advanced spinning machines & quality equipment</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🔬</div>
+                            <div class="highlight-content">
+                                <h4>Quality Testing</h4>
+                                <p>Rigorous quality control at every stage</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👨‍💼</div>
+                            <div class="highlight-content">
+                                <h4>Expert Team</h4>
+                                <p>Experienced professionals & engineers</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌍</div>
+                            <div class="highlight-content">
+                                <h4>Wide Coverage</h4>
+                                <p>Serving entire North India region</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image-grid">
+                    <div class="about-image-item"></div>
+                    <div class="about-image-item"></div>
+                    <div class="about-image-item"></div>
+                    <div class="about-image-item"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Our Product Range</div>
+                <h2 class="section-title">Complete RCC Pipe Solutions</h2>
+                <p class="section-description">Comprehensive range of premium quality concrete pipes and products manufactured with precision and care for all your infrastructure needs.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge">Popular</div>
+                        <div class="product-icon">🔵</div>
+                        <h3>RCC Spun Pipe (NP2)</h3>
+                        <p class="product-subtitle">Standard Grade for Drainage</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Diameter Range</span>
+                                <span class="spec-value">200-1200mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Standard Length</span>
+                                <span class="spec-value">2.5 - 3.0m</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Pressure Class</span>
+                                <span class="spec-value">NP2 Grade</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Drainage & Sewerage</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">ISI Marked & BIS Certified</div>
+                                <div class="feature-list-item">High compressive strength</div>
+                                <div class="feature-list-item">Uniform wall thickness</div>
+                                <div class="feature-list-item">Leak-proof joints</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="product-icon">🔷</div>
+                        <h3>RCC Spun Pipe (NP3)</h3>
+                        <p class="product-subtitle">Medium Pressure Grade</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Diameter Range</span>
+                                <span class="spec-value">200-1400mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Standard Length</span>
+                                <span class="spec-value">2.5 - 3.0m</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Pressure Class</span>
+                                <span class="spec-value">NP3 Grade</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Water Supply & Irrigation</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">Enhanced pressure resistance</div>
+                                <div class="feature-list-item">Superior reinforcement</div>
+                                <div class="feature-list-item">Long service life</div>
+                                <div class="feature-list-item">Cost-effective solution</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge">Premium</div>
+                        <div class="product-icon">💎</div>
+                        <h3>RCC Spun Pipe (NP4)</h3>
+                        <p class="product-subtitle">Heavy Duty Grade</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Diameter Range</span>
+                                <span class="spec-value">300-1800mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Standard Length</span>
+                                <span class="spec-value">2.5 - 3.0m</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Pressure Class</span>
+                                <span class="spec-value">NP4 Grade</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Heavy Duty Projects</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">Maximum pressure capacity</div>
+                                <div class="feature-list-item">Extra reinforcement layers</div>
+                                <div class="feature-list-item">Industrial applications</div>
+                                <div class="feature-list-item">Extreme durability</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">⭕</div>
+                        <h3>RCC Hume Pipes</h3>
+                        <p class="product-subtitle">Traditional Concrete Pipes</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Diameter Range</span>
+                                <span class="spec-value">150-1000mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Standard Length</span>
+                                <span class="spec-value">2.0 - 2.5m</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Joint Type</span>
+                                <span class="spec-value">Socket & Spigot</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Storm Water Drainage</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">Economical solution</div>
+                                <div class="feature-list-item">Easy installation</div>
+                                <div class="feature-list-item">Good load capacity</div>
+                                <div class="feature-list-item">Proven reliability</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-badge">Specialized</div>
+                        <div class="product-icon">🔘</div>
+                        <h3>Jacking Pipes</h3>
+                        <p class="product-subtitle">For Tunneling Projects</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Diameter Range</span>
+                                <span class="spec-value">600-2400mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Standard Length</span>
+                                <span class="spec-value">2.5 - 3.0m</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Special Feature</span>
+                                <span class="spec-value">High Axial Load</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Micro Tunneling</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">Ultra-high strength concrete</div>
+                                <div class="feature-list-item">Precise dimensions</div>
+                                <div class="feature-list-item">Underground applications</div>
+                                <div class="feature-list-item">Heavy load bearing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">🔳</div>
+                        <h3>Manhole Covers</h3>
+                        <p class="product-subtitle">SFRC & RCC Covers</p>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-specs">
+                            <li>
+                                <span class="spec-label">Available Sizes</span>
+                                <span class="spec-value">600mm, 900mm</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Material Type</span>
+                                <span class="spec-value">SFRC / RCC</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Load Class</span>
+                                <span class="spec-value">Heavy Duty</span>
+                            </li>
+                            <li>
+                                <span class="spec-label">Primary Use</span>
+                                <span class="spec-value">Road & Drainage</span>
+                            </li>
+                        </ul>
+
+                        <div class="product-features">
+                            <h4>Key Features:</h4>
+                            <div class="feature-list">
+                                <div class="feature-list-item">Anti-theft design</div>
+                                <div class="feature-list-item">Heavy vehicle load capacity</div>
+                                <div class="feature-list-item">Weather resistant</div>
+                                <div class="feature-list-item">Long-lasting performance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-cta">
+                            <a href="#contact" class="btn btn-primary btn-block">Get Best Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="applications-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Industries We Serve</div>
+                <h2 class="section-title">Wide Range of Applications</h2>
+                <p class="section-description">Our premium RCC pipes serve diverse sectors across infrastructure, construction, and industrial applications throughout North India.</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="application-icon">🏗️</div>
+                    <h3>Construction</h3>
+                    <p>Residential & commercial building projects</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🌊</div>
+                    <h3>Water Supply</h3>
+                    <p>Municipal water distribution systems</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🚰</div>
+                    <h3>Sewerage</h3>
+                    <p>Underground sewerage networks</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🌾</div>
+                    <h3>Irrigation</h3>
+                    <p>Agricultural water management</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🛣️</div>
+                    <h3>Infrastructure</h3>
+                    <p>Highways & urban development</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🏭</div>
+                    <h3>Industrial</h3>
+                    <p>Factory drainage & effluent systems</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🏛️</div>
+                    <h3>Government</h3>
+                    <p>Public infrastructure projects</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon">🌧️</div>
+                    <h3>Storm Water</h3>
+                    <p>Rain water drainage solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="why-choose-content">
+                <div class="section-header">
+                    <div class="section-subtitle" style="color: var(--accent-color);">Why Choose Us</div>
+                    <h2 class="section-title" style="color: var(--white);">Setting Industry Standards</h2>
+                    <p class="section-description" style="color: rgba(255,255,255,0.9);">Uncompromising commitment to quality, service excellence, and customer satisfaction makes us the preferred choice for infrastructure projects.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-card-icon">🏆</div>
+                        <h3>ISO 9001:2015 Certified</h3>
+                        <p>International quality management standards maintained across all processes with regular third-party audits and compliance verification.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">🏭</div>
+                        <h3>Advanced Technology</h3>
+                        <p>State-of-the-art spinning machines ensure uniform concrete distribution, superior strength, and consistent product quality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">💰</div>
+                        <h3>Competitive Rates</h3>
+                        <p>Best market pricing without compromising quality. Special bulk order discounts and flexible payment terms available.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">🚚</div>
+                        <h3>Timely Delivery</h3>
+                        <p>Own fleet of vehicles ensures prompt and safe delivery across Delhi NCR, Haryana, Rajasthan, and entire North India.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">🔬</div>
+                        <h3>Quality Testing</h3>
+                        <p>Rigorous quality checks at every stage from raw material selection to final product inspection and dispatch.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">👨‍💼</div>
+                        <h3>Expert Support</h3>
+                        <p>Dedicated technical team provides installation guidance, project consultation, and comprehensive after-sales support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Standards Section -->
+    <section class="quality-section" id="quality">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Quality Assurance</div>
+                <h2 class="section-title">Uncompromising Quality Standards</h2>
+                <p class="section-description">Every product undergoes stringent quality control measures to ensure superior performance and long-lasting durability.</p>
+            </div>
+
+            <div class="quality-content">
+                <div class="quality-list">
+                    <div class="quality-item">
+                        <div class="quality-number">01</div>
+                        <div class="quality-text">
+                            <h4>Raw Material Selection</h4>
+                            <p>Premium grade cement, high-tensile steel reinforcement, and tested aggregates sourced from certified suppliers only.</p>
+                        </div>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-number">02</div>
+                        <div class="quality-text">
+                            <h4>Advanced Manufacturing</h4>
+                            <p>Automated spinning process ensures uniform wall thickness, perfect compaction, and superior concrete density throughout.</p>
+                        </div>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-number">03</div>
+                        <div class="quality-text">
+                            <h4>Rigorous Testing</h4>
+                            <p>Comprehensive tests including compression strength, water absorption, permeability, and dimensional accuracy verification.</p>
+                        </div>
+                    </div>
+                    <div class="quality-item">
+                        <div class="quality-number">04</div>
+                        <div class="quality-text">
+                            <h4>Certification Compliance</h4>
+                            <p>Full compliance with BIS standards, ISI marking, and ISO 9001:2015 quality management system requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="certification-icon">🏆</div>
+                        <h4>ISO 9001:2015</h4>
+                        <p>Quality Management System Certified</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">✓</div>
+                        <h4>BIS Certified</h4>
+                        <p>Bureau of Indian Standards Approved</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">📋</div>
+                        <h4>ISI Marked</h4>
+                        <p>All Products ISI Certified</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-icon">🔬</div>
+                        <h4>Lab Tested</h4>
+                        <p>NABL Accredited Lab Testing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Our Process</div>
+                <h2 class="section-title">Manufacturing Excellence</h2>
+                <p class="section-description">A systematic approach ensuring every pipe meets the highest standards of quality and performance.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-circle">
+                            <div class="step-number">01</div>
+                        </div>
+                        <div class="step-title">Material Selection</div>
+                        <p class="step-description">Premium grade raw materials tested & approved</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">
+                            <div class="step-number">02</div>
+                        </div>
+                        <div class="step-title">Concrete Mixing</div>
+                        <p class="step-description">Precise batching & thorough mixing process</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">
+                            <div class="step-number">03</div>
+                        </div>
+                        <div class="step-title">Spinning Process</div>
+                        <p class="step-description">High-speed spinning for uniform density</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">
+                            <div class="step-number">04</div>
+                        </div>
+                        <div class="step-title">Curing</div>
+                        <p class="step-description">Controlled curing for optimal strength</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">
+                            <div class="step-number">05</div>
+                        </div>
+                        <div class="step-title">Quality Check</div>
+                        <p class="step-description">Final testing & certification before dispatch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get the Best Quote?</h2>
+                <p>Contact us today for competitive pricing and expert consultation for your project requirements</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-white btn-lg">Request Quote Now</a>
+                    <a href="tel:+919876543210" class="btn btn-outline-white btn-lg">Call: +91 98765 43210</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact-section" id="contact">
-        <div class="contact-grid">
-            <div>
-                <h2 class="section-title" style="text-align: left;">Request Quote</h2>
-                <form onsubmit="handleSubmit(event)">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>Name *</label>
-                            <input type="text" required placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                            <label>Phone *</label>
-                            <input type="tel" required placeholder="+91 98765 43210">
-                        </div>
-                    </div>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" placeholder="your@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label>Product *</label>
-                            <select required>
-                                <option value="">Select Product</option>
-                                <option>RCC Spun Pipe (NP2)</option>
-                                <option>RCC Spun Pipe (NP3)</option>
-                                <option>RCC Spun Pipe (NP4)</option>
-                                <option>RCC Hume Pipe</option>
-                                <option>Jacking Pipe</option>
-                                <option>Manhole Cover</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Requirements *</label>
-                        <textarea required placeholder="Diameter, quantity, delivery location"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
-                </form>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Get In Touch</div>
+                <h2 class="section-title">Request Your Custom Quote</h2>
+                <p class="section-description">Fill out the form below and our team will get back to you with the best pricing within 2 hours</p>
             </div>
 
-            <div class="contact-info">
-                <div class="info-box">
-                    <h4>📍 Address</h4>
-                    <p>Industrial Area, Rewari, Haryana - 123401</p>
+            <div class="contact-wrapper">
+                <div class="contact-form-wrapper">
+                    <h3>Send Your Requirements</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name <span>*</span></label>
+                                <input type="text" class="form-control" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number <span>*</span></label>
+                                <input type="tel" class="form-control" required placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Company Name</label>
+                                <input type="text" class="form-control" placeholder="Your company (optional)">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Product Type <span>*</span></label>
+                                <select class="form-control" required>
+                                    <option value="">Select Product</option>
+                                    <option>RCC Spun Pipe (NP2)</option>
+                                    <option>RCC Spun Pipe (NP3)</option>
+                                    <option>RCC Spun Pipe (NP4)</option>
+                                    <option>RCC Hume Pipe</option>
+                                    <option>Jacking Pipe</option>
+                                    <option>Manhole Cover</option>
+                                    <option>Other Products</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Delivery Location <span>*</span></label>
+                                <input type="text" class="form-control" required placeholder="City, State">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Project Details <span>*</span></label>
+                            <textarea class="form-control form-control-textarea" required placeholder="Please mention: Pipe diameter, quantity required, project timeline, and any specific requirements"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Quote Request</button>
+                    </form>
                 </div>
-                <div class="info-box">
-                    <h4>📞 Phone</h4>
-                    <p><a href="tel:+919876543210">+91 98765 43210</a><br>
-                    <a href="tel:+919876543211">+91 98765 43211</a></p>
-                </div>
-                <div class="info-box">
-                    <h4>✉️ Email</h4>
-                    <p><a href="mailto:info@jaigurudevspunpipe.com">info@jaigurudevspunpipe.com</a><br>
-                    <a href="mailto:sales@jaigurudevspunpipe.com">sales@jaigurudevspunpipe.com</a></p>
-                </div>
-                <div class="info-box">
-                    <h4>🕐 Working Hours</h4>
-                    <p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">📍</div>
+                            <div class="info-card-title">Visit Our Facility</div>
+                        </div>
+                        <div class="info-card-content">
+                            Industrial Area, Rewari<br>
+                            Haryana - 123401, India
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">📞</div>
+                            <div class="info-card-title">Call Us Directly</div>
+                        </div>
+                        <div class="info-card-content">
+                            <a href="tel:+919876543210">+91 98765 43210</a><br>
+                            <a href="tel:+919876543211">+91 98765 43211</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">✉️</div>
+                            <div class="info-card-title">Email Us</div>
+                        </div>
+                        <div class="info-card-content">
+                            <a href="mailto:info@jaigurudevspunpipe.com">info@jaigurudevspunpipe.com</a><br>
+                            <a href="mailto:sales@jaigurudevspunpipe.com">sales@jaigurudevspunpipe.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="info-card-header">
+                            <div class="info-card-icon">🕐</div>
+                            <div class="info-card-title">Business Hours</div>
+                        </div>
+                        <div class="info-card-content">
+                            Monday - Saturday: 9:00 AM - 6:00 PM<br>
+                            Sunday: Closed
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -650,55 +2502,134 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About</h4>
-                <p style="font-size: 14px; color: #ccc;">ISO 9001:2015 certified RCC pipe manufacturer serving Delhi NCR, Haryana & Rajasthan.</p>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <h3>Jai Guru Dev Spun Pipe</h3>
+                        <p>ISO 9001:2015 certified manufacturer of premium RCC Spun Pipes, Hume Pipes, and comprehensive concrete products. Serving Delhi NCR, Haryana, and Rajasthan with unwavering commitment to quality and customer satisfaction since 2020.</p>
+                        <div class="footer-certifications">
+                            <div class="cert-badge">ISO 9001:2015</div>
+                            <div class="cert-badge">BIS CERTIFIED</div>
+                            <div class="cert-badge">ISI MARKED</div>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#quality">Quality</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Our Products</h4>
+                        <ul class="footer-links">
+                            <li><a href="#products">RCC Spun Pipes</a></li>
+                            <li><a href="#products">RCC Hume Pipes</a></li>
+                            <li><a href="#products">Jacking Pipes</a></li>
+                            <li><a href="#products">Manhole Covers</a></li>
+                            <li><a href="#products">Culvert Pipes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Service Areas</h4>
+                        <ul class="footer-links">
+                            <li>Rewari, Haryana</li>
+                            <li>Delhi NCR</li>
+                            <li>Gurgaon & Faridabad</li>
+                            <li>Jaipur, Rajasthan</li>
+                            <li>Entire North India</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Products</h4>
-                <ul>
-                    <li>RCC Spun Pipes</li>
-                    <li>RCC Hume Pipes</li>
-                    <li>Jacking Pipes</li>
-                    <li>Manhole Covers</li>
-                </ul>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jai Guru Dev Spun Pipe. All Rights Reserved. | ISO 9001:2015 Certified Company</p>
             </div>
-            <div class="footer-section">
-                <h4>Service Areas</h4>
-                <ul>
-                    <li>Rewari, Haryana</li>
-                    <li>Delhi NCR</li>
-                    <li>Rajasthan</li>
-                    <li>North India</li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="tel:+919876543210">+91 98765 43210</a></li>
-                    <li><a href="mailto:info@jaigurudevspunpipe.com">Email Us</a></li>
-                    <li>Mon-Sat: 9 AM - 6 PM</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Jai Guru Dev Spun Pipe. All Rights Reserved. ISO 9001:2015 Certified</p>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
     <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Form Submission
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you! We will call you within 2 hours with the best price.');
+            alert('Thank you for your interest! Our team will contact you within 2 hours with the best customized quote for your project.');
             e.target.reset();
         }
 
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
             });
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            if (window.pageYOffset > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Lazy load animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.product-card, .feature-card, .application-card, .quality-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
         });
     </script>
 </body>
