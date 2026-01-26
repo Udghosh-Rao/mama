@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jai Guru Dev Spun Pipe - Industrial RCC Pipe Manufacturing Solutions</title>
-    <meta name="description" content="Premier manufacturer of precision-engineered RCC Spun Pipes for infrastructure and industrial applications across Northern India.">
+    <title>Jai Guru Dev Spun Pipe - RCC Spun Pipe Manufacturer Rewari</title>
+    <meta name="description" content="RCC Spun Pipe manufacturer in Rewari. ISO 9001:2015 certified. We make pipes as per your requirements.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -44,14 +44,13 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
         }
 
-        /* Top Header */
+        /* Top Bar */
         .utility-bar {
             background: var(--neutral-900);
             border-bottom: 1px solid var(--neutral-800);
@@ -96,7 +95,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* Main Navigation */
+        /* Header */
         .main-header {
             background: var(--white);
             border-bottom: 1px solid var(--neutral-200);
@@ -171,7 +170,7 @@
             color: var(--accent);
         }
 
-        .nav-actions {
+        .nav-cta {
             display: flex;
             gap: 12px;
         }
@@ -206,72 +205,108 @@
             background: var(--accent-light);
         }
 
-        /* Hero */
-        .hero {
-            background: linear-gradient(180deg, var(--neutral-900) 0%, var(--primary-dark) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%),
-                url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.6;
+        /* Hero Section with Form */
+        .hero-section {
+            background: var(--white);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--neutral-200);
         }
 
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 120px 40px;
-            position: relative;
-            z-index: 1;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
         }
 
-        .hero-content {
-            max-width: 740px;
-        }
-
-        .hero-label {
-            display: inline-block;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: var(--white);
-            padding: 6px 16px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero h2 {
-            font-size: 56px;
+        .company-info h2 {
+            font-size: 48px;
             font-weight: 800;
-            color: var(--white);
+            color: var(--text-primary);
             margin-bottom: 24px;
             line-height: 1.1;
             letter-spacing: -0.03em;
         }
 
-        .hero-description {
-            font-size: 18px;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 40px;
-            line-height: 1.7;
-            font-weight: 400;
+        .company-highlight {
+            color: var(--accent);
         }
 
-        .hero-actions {
+        .company-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .company-details {
+            background: var(--neutral-50);
+            border-left: 4px solid var(--primary);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .detail-row {
             display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--neutral-200);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            width: 140px;
+            flex-shrink: 0;
+        }
+
+        .detail-value {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .company-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+        }
+
+        .feature-check {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .feature-text {
+            font-size: 15px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 12px;
         }
 
         .btn-large {
@@ -279,15 +314,68 @@
             font-size: 15px;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
+        /* Enquiry Form */
+        .enquiry-form {
+            background: var(--neutral-50);
+            border: 2px solid var(--neutral-300);
+            padding: 40px;
+            position: sticky;
+            top: 100px;
         }
 
-        .btn-outline:hover {
+        .form-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            letter-spacing: 0.01em;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--neutral-300);
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
             background: var(--white);
-            color: var(--primary);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            line-height: 1.6;
         }
 
         /* Stats Bar */
@@ -332,7 +420,7 @@
             text-transform: uppercase;
         }
 
-        /* Main Content Sections */
+        /* Services Section */
         .section {
             padding: 100px 0;
         }
@@ -372,26 +460,26 @@
             font-weight: 400;
         }
 
-        /* Capabilities Grid */
-        .capabilities-grid {
+        /* Services Grid */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
 
-        .capability-card {
+        .service-card {
             background: var(--white);
             border: 1px solid var(--neutral-200);
             padding: 40px;
             transition: all 0.3s;
         }
 
-        .capability-card:hover {
+        .service-card:hover {
             border-color: var(--primary);
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
         }
 
-        .capability-icon {
+        .service-number {
             width: 56px;
             height: 56px;
             background: var(--primary);
@@ -399,132 +487,49 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 24px;
         }
 
-        .capability-card h3 {
+        .service-card h3 {
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 12px;
             color: var(--text-primary);
         }
 
-        .capability-card p {
+        .service-card p {
             font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.7;
         }
 
-        /* Feature Section */
-        .feature-section {
-            background: var(--neutral-50);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .feature-image {
-            background: var(--neutral-300);
-            height: 520px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--neutral-500);
-            font-size: 64px;
-            font-weight: 300;
-        }
-
-        .feature-content h3 {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .feature-content p {
-            font-size: 16px;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .feature-list {
-            margin-top: 32px;
-        }
-
-        .feature-list-item {
-            display: flex;
-            gap: 16px;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--neutral-200);
-        }
-
-        .feature-list-item:first-child {
-            padding-top: 0;
-        }
-
-        .feature-list-item:last-child {
-            border-bottom: none;
-        }
-
-        .feature-list-icon {
-            width: 24px;
-            height: 24px;
-            background: var(--primary);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .feature-list-text h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-
-        .feature-list-text p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Standards Section */
-        .standards-section {
+        /* Quality Section */
+        .quality-section {
             background: var(--primary);
             color: var(--white);
         }
 
-        .standards-section .section-label {
+        .quality-section .section-label {
             color: var(--accent);
         }
 
-        .standards-section .section-title {
+        .quality-section .section-title {
             color: var(--white);
         }
 
-        .standards-section .section-description {
+        .quality-section .section-description {
             color: rgba(255,255,255,0.8);
         }
 
-        .standards-grid {
+        .quality-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
         }
 
-        .standard-card {
+        .quality-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
             padding: 40px;
@@ -532,158 +537,20 @@
             backdrop-filter: blur(10px);
         }
 
-        .standard-icon {
+        .quality-icon {
             font-size: 48px;
             margin-bottom: 20px;
         }
 
-        .standard-card h3 {
+        .quality-card h3 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
-        .standard-card p {
+        .quality-card p {
             font-size: 14px;
             opacity: 0.9;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--accent);
-            padding: 80px 0;
-        }
-
-        .cta-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cta-content h3 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-        }
-
-        .cta-content p {
-            font-size: 16px;
-            color: rgba(255,255,255,0.9);
-        }
-
-        .btn-white {
-            background: var(--white);
-            color: var(--accent);
-        }
-
-        .btn-white:hover {
-            background: var(--neutral-100);
-        }
-
-        /* Contact Form Section */
-        .contact-section {
-            background: var(--neutral-50);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-        }
-
-        .form-wrapper {
-            background: var(--white);
-            border: 1px solid var(--neutral-200);
-            padding: 48px;
-        }
-
-        .form-title {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 32px;
-            letter-spacing: -0.02em;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            letter-spacing: 0.01em;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid var(--neutral-300);
-            font-size: 15px;
-            font-family: 'Inter', sans-serif;
-            transition: border-color 0.2s;
-            background: var(--white);
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .info-card {
-            background: var(--white);
-            border: 1px solid var(--neutral-200);
-            padding: 32px;
-        }
-
-        .info-card h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 16px;
-            letter-spacing: 0.01em;
-        }
-
-        .info-card p {
-            font-size: 15px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 8px;
-        }
-
-        .info-card a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .info-card a:hover {
-            color: var(--accent);
         }
 
         /* Footer */
@@ -691,6 +558,12 @@
             background: var(--neutral-900);
             color: var(--neutral-400);
             padding: 80px 0 40px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
         .footer-grid {
@@ -767,33 +640,24 @@
             font-size: 13px;
         }
 
-        /* Mobile Menu */
         .mobile-toggle {
             display: none;
         }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .nav-container,
-            .utility-container,
-            .hero-container,
-            .section-container,
-            .stats-container,
-            .cta-container,
-            .footer-grid {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
-
-            .capabilities-grid,
-            .standards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .feature-grid,
-            .contact-grid {
+            .hero-container {
                 grid-template-columns: 1fr;
                 gap: 48px;
+            }
+
+            .enquiry-form {
+                position: static;
+            }
+
+            .services-grid,
+            .quality-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .footer-grid {
@@ -802,6 +666,16 @@
         }
 
         @media (max-width: 768px) {
+            .utility-container,
+            .nav-container,
+            .hero-container,
+            .section-container,
+            .stats-container,
+            .footer-container {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
             .mobile-toggle {
                 display: block;
                 background: none;
@@ -815,8 +689,20 @@
                 display: none;
             }
 
-            .hero h2 {
+            .nav-cta {
+                display: none;
+            }
+
+            .company-info h2 {
                 font-size: 36px;
+            }
+
+            .company-features {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
             }
 
             .section-title {
@@ -824,8 +710,8 @@
             }
 
             .stats-container,
-            .capabilities-grid,
-            .standards-grid {
+            .services-grid,
+            .quality-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -840,14 +726,8 @@
                 padding-bottom: 0;
             }
 
-            .form-row {
+            .footer-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .cta-container {
-                flex-direction: column;
-                gap: 32px;
-                text-align: center;
             }
 
             .footer-bottom {
@@ -859,55 +739,132 @@
     </style>
 </head>
 <body>
-    <!-- Utility Bar -->
+    <!-- Top Bar -->
     <div class="utility-bar">
         <div class="utility-container">
             <div class="utility-left">
                 <a href="tel:+919876543210" class="utility-item">+91 98765 43210</a>
-                <a href="mailto:enquiry@jaigurudevspunpipe.com" class="utility-item">enquiry@jaigurudevspunpipe.com</a>
+                <a href="mailto:sales@jaigurudevspunpipe.com" class="utility-item">sales@jaigurudevspunpipe.com</a>
             </div>
             <div class="certification-badge">ISO 9001:2015 CERTIFIED</div>
         </div>
     </div>
 
-    <!-- Main Header -->
+    <!-- Header -->
     <header class="main-header">
         <nav class="nav-container">
             <div class="brand">
                 <div class="brand-logo">JG</div>
                 <div class="brand-identity">
                     <h1>Jai Guru Dev Spun Pipe</h1>
-                    <p class="brand-tagline">Engineering Excellence Since 2020</p>
+                    <p class="brand-tagline">RCC Spun Pipe Manufacturer</p>
                 </div>
             </div>
 
             <button class="mobile-toggle">☰</button>
 
             <ul class="main-nav">
-                <li><a href="#capabilities">Capabilities</a></li>
-                <li><a href="#manufacturing">Manufacturing</a></li>
-                <li><a href="#standards">Standards</a></li>
+                <li><a href="#services">What We Do</a></li>
+                <li><a href="#quality">Quality</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <div class="nav-actions">
+            <div class="nav-cta">
                 <a href="tel:+919876543210" class="btn btn-primary">Call Now</a>
-                <a href="#contact" class="btn btn-secondary">Request Quote</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero with Company Info + Form -->
+    <section class="hero-section" id="home">
         <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-label">Industrial Infrastructure Solutions</span>
-                <h2>Precision-Engineered RCC Spun Pipe Manufacturing</h2>
-                <p class="hero-description">ISO 9001:2015 certified manufacturer delivering custom-fabricated reinforced concrete cement pipes for critical infrastructure projects across Northern India. Engineered to specification, delivered on schedule.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-secondary btn-large">Request Technical Quote</a>
-                    <a href="tel:+919876543210" class="btn btn-outline btn-large">Speak to Engineer</a>
+            <!-- Company Information -->
+            <div class="company-info">
+                <h2>We Make <span class="company-highlight">RCC Spun Pipes</span> As Per Your Requirements</h2>
+                <p class="company-description">ISO 9001:2015 certified manufacturer in Rewari. We make pipes in any size, any quantity based on your project needs.</p>
+
+                <div class="company-details">
+                    <div class="detail-row">
+                        <div class="detail-label">Company:</div>
+                        <div class="detail-value">Jai Guru Dev Spun Pipe</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Product:</div>
+                        <div class="detail-value">RCC Spun Pipes, Hume Pipes</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Location:</div>
+                        <div class="detail-value">Industrial Area, Rewari, Haryana</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Certification:</div>
+                        <div class="detail-value">ISO 9001:2015, BIS, ISI Marked</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Service Area:</div>
+                        <div class="detail-value">Delhi NCR, Haryana, Rajasthan</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">Experience:</div>
+                        <div class="detail-value">Since 2020</div>
+                    </div>
                 </div>
+
+                <div class="company-features">
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">Any diameter, any length</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">Made to order</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">Quality guaranteed</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">Delivery to site</div>
+                    </div>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="tel:+919876543210" class="btn btn-secondary btn-large">Call: +91 98765 43210</a>
+                    <a href="https://wa.me/919876543210" class="btn btn-primary btn-large">WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div class="enquiry-form">
+                <h3 class="form-title">Get Quote Now</h3>
+                <p class="form-subtitle">Tell us what you need. We'll contact you within 24 hours.</p>
+
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Your Name *</label>
+                        <input type="text" class="form-input" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number *</label>
+                        <input type="tel" class="form-input" required placeholder="+91 98765 43210">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">What do you need? *</label>
+                        <textarea class="form-input form-textarea" required placeholder="Tell us:&#10;- Pipe diameter&#10;- Quantity&#10;- Delivery location&#10;- Any special requirements"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-secondary btn-large" style="width: 100%;">Send Enquiry</button>
+
+                    <p class="form-note">We'll call you back with pricing and delivery details within 24 hours.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -917,237 +874,113 @@
         <div class="stats-container">
             <div class="stat-item">
                 <div class="stat-value">500+</div>
-                <div class="stat-label">Projects Delivered</div>
+                <div class="stat-label">Projects Done</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">250+</div>
-                <div class="stat-label">Corporate Clients</div>
+                <div class="stat-label">Happy Clients</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">100%</div>
-                <div class="stat-label">Quality Compliance</div>
+                <div class="stat-label">Quality Assured</div>
             </div>
             <div class="stat-item">
-                <div class="stat-value">24/7</div>
-                <div class="stat-label">Technical Support</div>
+                <div class="stat-value">5+</div>
+                <div class="stat-label">Years Experience</div>
             </div>
         </div>
     </div>
 
-    <!-- Capabilities Section -->
-    <section class="section" id="capabilities">
+    <!-- Services -->
+    <section class="section" id="services">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-label">Manufacturing Capabilities</div>
-                <h2 class="section-title">Custom-Engineered Solutions for Complex Infrastructure</h2>
-                <p class="section-description">We manufacture reinforced concrete cement pipes to exact project specifications, utilizing advanced spinning technology and stringent quality control protocols to ensure structural integrity and longevity.</p>
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">We Make Spun Pipes Based on Your Requirements</h2>
+                <p class="section-description">Tell us what size and quantity you need. We manufacture and deliver to your site.</p>
             </div>
 
-            <div class="capabilities-grid">
-                <div class="capability-card">
-                    <div class="capability-icon">01</div>
-                    <h3>Custom Specifications</h3>
-                    <p>Manufacturing to client-defined parameters including diameter range 150mm-2400mm, custom lengths, and pressure classifications tailored to project load requirements and soil conditions.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Custom Manufacturing</h3>
+                    <p>We make pipes in any diameter (150mm to 2400mm) and any length you need for your project.</p>
                 </div>
 
-                <div class="capability-card">
-                    <div class="capability-icon">02</div>
-                    <h3>Precision Fabrication</h3>
-                    <p>Computer-controlled spinning process ensures uniform wall thickness, optimal concrete density, and consistent reinforcement placement throughout the pipe structure.</p>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Made to Order</h3>
+                    <p>Every pipe is manufactured fresh based on your order. No stock - everything made as per your specifications.</p>
                 </div>
 
-                <div class="capability-card">
-                    <div class="capability-icon">03</div>
-                    <h3>Volume Production</h3>
-                    <p>Scalable manufacturing capacity to accommodate large-scale infrastructure projects. From prototype runs to full production volumes with consistent quality maintenance.</p>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Quality Certified</h3>
+                    <p>ISO 9001:2015 certified manufacturing. All pipes are BIS approved and ISI marked.</p>
                 </div>
 
-                <div class="capability-card">
-                    <div class="capability-icon">04</div>
-                    <h3>Technical Engineering</h3>
-                    <p>Dedicated engineering team provides load calculations, joint design consultation, and installation specifications customized to your project requirements.</p>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3>Any Quantity</h3>
+                    <p>Whether you need 10 pipes or 10,000 pipes - we handle orders of all sizes.</p>
                 </div>
 
-                <div class="capability-card">
-                    <div class="capability-icon">05</div>
-                    <h3>Quality Assurance</h3>
-                    <p>Comprehensive testing protocols including compression tests, permeability analysis, and dimensional verification in accordance with BIS standards.</p>
+                <div class="service-card">
+                    <div class="service-number">05</div>
+                    <h3>Site Delivery</h3>
+                    <p>We deliver directly to your project site in Delhi NCR, Haryana, and Rajasthan.</p>
                 </div>
 
-                <div class="capability-card">
-                    <div class="capability-icon">06</div>
-                    <h3>Logistics Support</h3>
-                    <p>Coordinated delivery scheduling and specialized transportation to project sites across Delhi NCR, Haryana, and Rajasthan regions with damage-free guarantees.</p>
+                <div class="service-card">
+                    <div class="service-number">06</div>
+                    <h3>Expert Support</h3>
+                    <p>Our team helps you choose the right pipe size and type for your project.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature Section -->
-    <section class="section feature-section" id="manufacturing">
-        <div class="section-container">
-            <div class="feature-grid">
-                <div class="feature-image">🏭</div>
-                <div class="feature-content">
-                    <div class="section-label">Manufacturing Process</div>
-                    <h3>Advanced Production Technology</h3>
-                    <p>Our Rewari facility operates state-of-the-art centrifugal spinning equipment, enabling precise control over concrete compaction and reinforcement positioning. This advanced manufacturing approach delivers superior structural performance compared to conventional casting methods.</p>
-                    <p>Each pipe undergoes controlled steam curing to optimize concrete strength development, followed by comprehensive quality verification before certification and dispatch.</p>
-
-                    <div class="feature-list">
-                        <div class="feature-list-item">
-                            <div class="feature-list-icon">✓</div>
-                            <div class="feature-list-text">
-                                <h4>Automated Batching Systems</h4>
-                                <p>Computer-controlled concrete mixing ensures consistent material ratios</p>
-                            </div>
-                        </div>
-                        <div class="feature-list-item">
-                            <div class="feature-list-icon">✓</div>
-                            <div class="feature-list-text">
-                                <h4>High-Speed Spinning Technology</h4>
-                                <p>Centrifugal force creates uniform density and eliminates voids</p>
-                            </div>
-                        </div>
-                        <div class="feature-list-item">
-                            <div class="feature-list-icon">✓</div>
-                            <div class="feature-list-text">
-                                <h4>Environmental Curing Chambers</h4>
-                                <p>Controlled temperature and humidity for optimal strength development</p>
-                            </div>
-                        </div>
-                        <div class="feature-list-item">
-                            <div class="feature-list-icon">✓</div>
-                            <div class="feature-list-text">
-                                <h4>Non-Destructive Testing</h4>
-                                <p>Ultrasonic and pressure testing validates structural integrity</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Standards Section -->
-    <section class="section standards-section" id="standards">
+    <!-- Quality Section -->
+    <section class="section quality-section" id="quality">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-label">Quality & Compliance</div>
-                <h2 class="section-title">Certified Manufacturing Standards</h2>
-                <p class="section-description">All products manufactured in full compliance with national and international standards, certified by accredited third-party testing laboratories.</p>
+                <div class="section-label">Quality Standards</div>
+                <h2 class="section-title">Certified Quality</h2>
+                <p class="section-description">All our pipes meet national and international quality standards.</p>
             </div>
 
-            <div class="standards-grid">
-                <div class="standard-card">
-                    <div class="standard-icon">🏆</div>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <div class="quality-icon">🏆</div>
                     <h3>ISO 9001:2015</h3>
-                    <p>Quality Management System Certification</p>
+                    <p>Quality Management Certified</p>
                 </div>
-                <div class="standard-card">
-                    <div class="standard-icon">✓</div>
-                    <h3>BIS Certified</h3>
-                    <p>Bureau of Indian Standards Approval</p>
+                <div class="quality-card">
+                    <div class="quality-icon">✓</div>
+                    <h3>BIS Approved</h3>
+                    <p>Bureau of Indian Standards</p>
                 </div>
-                <div class="standard-card">
-                    <div class="standard-icon">📋</div>
+                <div class="quality-card">
+                    <div class="quality-icon">📋</div>
                     <h3>ISI Marked</h3>
-                    <p>Indian Standards Institution Compliance</p>
+                    <p>All Products ISI Certified</p>
                 </div>
-                <div class="standard-card">
-                    <div class="standard-icon">🔬</div>
-                    <h3>NABL Tested</h3>
-                    <p>Accredited Laboratory Verification</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-container">
-            <div class="cta-content">
-                <h3>Need Custom-Engineered Pipes?</h3>
-                <p>Submit your technical requirements for detailed quotation and engineering consultation</p>
-            </div>
-            <a href="#contact" class="btn btn-white btn-large">Request Technical Proposal</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Get In Touch</div>
-                <h2 class="section-title">Request Project Quotation</h2>
-                <p class="section-description">Submit your project specifications and our engineering team will provide detailed technical proposal and pricing within 24 hours.</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="form-wrapper">
-                    <h3 class="form-title">Technical Enquiry Form</h3>
-                    <form onsubmit="handleSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">Full Name *</label>
-                                <input type="text" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Contact Number *</label>
-                                <input type="tel" class="form-input" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">Email Address *</label>
-                                <input type="email" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Organization</label>
-                                <input type="text" class="form-input">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Project Specifications *</label>
-                            <textarea class="form-input form-textarea" required placeholder="Please provide: Pipe diameter required, length specifications, quantity, pressure grade requirements, delivery location, project timeline"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-secondary btn-large" style="width: 100%;">Submit Technical Enquiry</button>
-                    </form>
-                </div>
-
-                <div class="contact-info">
-                    <div class="info-card">
-                        <h4>Corporate Office & Manufacturing</h4>
-                        <p>Industrial Area, Rewari<br>Haryana 123401, India</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h4>Business Enquiries</h4>
-                        <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
-                        <p>Phone: <a href="tel:+919876543211">+91 98765 43211</a></p>
-                        <p>Email: <a href="mailto:enquiry@jaigurudevspunpipe.com">enquiry@jaigurudevspunpipe.com</a></p>
-                    </div>
-
-                    <div class="info-card">
-                        <h4>Technical Support</h4>
-                        <p>Email: <a href="mailto:technical@jaigurudevspunpipe.com">technical@jaigurudevspunpipe.com</a></p>
-                        <p>Available: Monday - Saturday<br>9:00 AM - 6:00 PM IST</p>
-                    </div>
+                <div class="quality-card">
+                    <div class="quality-icon">🔬</div>
+                    <h3>Lab Tested</h3>
+                    <p>Every Batch Quality Tested</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="section-container">
+    <footer class="main-footer" id="contact">
+        <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>Jai Guru Dev Spun Pipe</h3>
-                    <p>ISO 9001:2015 certified manufacturer of precision-engineered reinforced concrete cement pipes. Serving critical infrastructure projects across Northern India with custom manufacturing solutions since 2020.</p>
+                    <p>ISO 9001:2015 certified RCC Spun Pipe manufacturer in Rewari. We make pipes as per your requirements. Serving Delhi NCR, Haryana, and Rajasthan since 2020.</p>
                     <div class="footer-certs">
                         <span class="cert-tag">ISO 9001:2015</span>
                         <span class="cert-tag">BIS CERTIFIED</span>
@@ -1156,39 +989,38 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>Company</h4>
+                    <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="#capabilities">Capabilities</a></li>
-                        <li><a href="#manufacturing">Manufacturing</a></li>
-                        <li><a href="#standards">Standards</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><a href="tel:+919876543211">+91 98765 43211</a></li>
+                        <li><a href="mailto:sales@jaigurudevspunpipe.com">sales@jaigurudevspunpipe.com</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Services</h4>
+                    <h4>Products</h4>
                     <ul class="footer-links">
-                        <li>Custom Manufacturing</li>
-                        <li>Technical Engineering</li>
-                        <li>Quality Testing</li>
-                        <li>Project Logistics</li>
+                        <li>RCC Spun Pipes</li>
+                        <li>RCC Hume Pipes</li>
+                        <li>Custom Sizes</li>
+                        <li>All Quantities</li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Service Regions</h4>
+                    <h4>Location</h4>
                     <ul class="footer-links">
-                        <li>Delhi NCR</li>
-                        <li>Haryana</li>
-                        <li>Rajasthan</li>
-                        <li>Northern India</li>
+                        <li>Industrial Area</li>
+                        <li>Rewari, Haryana</li>
+                        <li>India - 123401</li>
+                        <li>Mon-Sat: 9 AM - 6 PM</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>© 2026 Jai Guru Dev Spun Pipe. All rights reserved.</p>
-                <p>ISO 9001:2015 Certified Manufacturing Facility</p>
+                <p>ISO 9001:2015 Certified Manufacturer</p>
             </div>
         </div>
     </footer>
@@ -1196,7 +1028,7 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you for your technical enquiry. Our engineering team will contact you within 24 hours with a detailed proposal.');
+            alert('Thank you! We received your enquiry. Our team will call you within 24 hours with pricing details.');
             e.target.reset();
         }
 
