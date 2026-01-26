@@ -6,7 +6,7 @@
     <title>Jai Guru Dev Spun Pipe - Premium RCC Manufacturer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -36,7 +36,7 @@
         header {
             background: var(--navy);
             color: var(--white);
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 13px;
             letter-spacing: 0.3px;
         }
@@ -56,9 +56,10 @@
         }
 
         .contact-info a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .contact-info a:hover {
@@ -68,17 +69,17 @@
         .iso-tag {
             background: var(--gold);
             color: var(--navy);
-            padding: 3px 14px;
+            padding: 4px 16px;
             border-radius: 2px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 11px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
         }
 
         /* Navigation */
         nav {
             background: var(--white);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -91,40 +92,41 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 75px;
+            height: 80px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
 
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: var(--navy);
             color: var(--gold);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 900;
-            font-size: 20px;
+            font-size: 22px;
+            border-radius: 2px;
         }
 
         .logo-text h1 {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 800;
             color: var(--navy);
             text-transform: uppercase;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
         }
 
         .logo-text p {
             font-size: 10px;
             color: var(--gray);
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             font-weight: 600;
         }
 
@@ -140,7 +142,7 @@
             font-size: 14px;
             font-weight: 600;
             transition: color 0.3s;
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
         }
 
         .nav-links a:hover {
@@ -150,17 +152,20 @@
         .cta-button {
             background: var(--navy);
             color: var(--white);
-            padding: 12px 28px;
+            padding: 13px 30px;
             text-decoration: none;
             font-size: 14px;
             font-weight: 700;
             transition: all 0.3s;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
         }
 
         .cta-button:hover {
             background: var(--gold);
             color: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
 
         .mobile-menu-toggle {
@@ -172,144 +177,256 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
-        .hero {
+        /* Hero Section with Image */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.95), rgba(26, 35, 50, 0.85)), 
+                        url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1600&q=80') center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 48%, rgba(212, 175, 55, 0.05) 50%, transparent 52%);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .hero-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 80px 40px;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 100px;
-            align-items: start;
+            padding: 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .hero-content h2 {
-            font-size: 64px;
-            font-weight: 800;
+            font-size: 68px;
+            font-weight: 900;
             line-height: 1.1;
-            color: var(--navy);
-            margin-bottom: 28px;
-            letter-spacing: -1.5px;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
         }
 
         .hero-content .highlight {
             color: var(--gold);
+            position: relative;
         }
 
         .hero-description {
-            font-size: 19px;
-            color: var(--gray);
-            margin-bottom: 40px;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 50px;
             line-height: 1.7;
             font-weight: 400;
         }
 
-        .company-info-box {
-            background: var(--light-gray);
-            padding: 35px;
-            margin-bottom: 40px;
-            border-left: 3px solid var(--navy);
-        }
-
-        .info-grid {
-            display: grid;
-            gap: 18px;
-        }
-
-        .info-row {
-            display: grid;
-            grid-template-columns: 130px 1fr;
-            gap: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .info-row:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .info-label {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .info-value {
-            font-size: 14px;
-            color: var(--dark);
-            font-weight: 500;
-        }
-
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .btn-primary {
-            background: var(--navy);
-            color: var(--white);
-            padding: 16px 38px;
+        .btn-hero {
+            padding: 18px 45px;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 700;
             transition: all 0.3s;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            border-radius: 2px;
             display: inline-block;
         }
 
-        .btn-primary:hover {
+        .btn-hero-primary {
             background: var(--gold);
             color: var(--navy);
         }
 
-        .btn-secondary {
+        .btn-hero-primary:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-hero-secondary {
             background: transparent;
-            color: var(--navy);
-            padding: 16px 38px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 700;
-            border: 2px solid var(--navy);
-            transition: all 0.3s;
-            letter-spacing: 0.3px;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background: var(--navy);
             color: var(--white);
+            border: 2px solid var(--white);
         }
 
-        /* Quote Form */
-        .quote-form {
+        .btn-hero-secondary:hover {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        /* Info Strip */
+        .info-strip {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* Company Info Section */
+        .company-section {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .company-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .company-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .company-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .company-image img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .company-image:hover img {
+            transform: scale(1.08);
+        }
+
+        .company-image.large {
+            grid-column: span 2;
+        }
+
+        .company-image.large img {
+            height: 350px;
+        }
+
+        .company-info-content h3 {
+            font-size: 14px;
+            color: var(--gold);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .company-info-content h2 {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 25px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .company-info-content p {
+            font-size: 17px;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .company-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .detail-item {
             background: var(--light-gray);
-            padding: 40px;
-            border-top: 3px solid var(--gold);
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            border-radius: 2px;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-size: 15px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* Quote Form Section */
+        .quote-section {
+            background: var(--light-gray);
+            padding: 90px 0;
+        }
+
+        .quote-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .quote-form {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--gold);
         }
 
         .form-header {
-            margin-bottom: 28px;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .form-header h3 {
-            font-size: 26px;
+            font-size: 32px;
             font-weight: 800;
             color: var(--navy);
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
 
         .form-header p {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--gray);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-label {
@@ -317,63 +434,162 @@
             font-size: 13px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
         }
 
         .form-input {
             width: 100%;
-            padding: 13px 16px;
-            border: 1px solid var(--gray-300);
-            font-size: 14px;
+            padding: 15px 18px;
+            border: 2px solid #e5e7eb;
+            font-size: 15px;
             font-family: 'Inter', sans-serif;
             background: var(--white);
             transition: all 0.3s;
+            border-radius: 2px;
         }
 
         .form-input:focus {
             outline: none;
             border-color: var(--navy);
-            box-shadow: 0 0 0 3px rgba(26, 35, 50, 0.05);
+            box-shadow: 0 0 0 4px rgba(26, 35, 50, 0.08);
         }
 
         textarea.form-input {
             resize: vertical;
-            min-height: 100px;
+            min-height: 120px;
         }
 
         .submit-btn {
             width: 100%;
             background: var(--navy);
             color: var(--white);
-            padding: 15px;
+            padding: 18px;
             border: none;
-            font-size: 15px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.3s;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            border-radius: 2px;
         }
 
         .submit-btn:hover {
             background: var(--gold);
             color: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
         }
 
         .form-note {
-            font-size: 12px;
+            font-size: 13px;
             color: var(--gray);
-            margin-top: 15px;
-            line-height: 1.5;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Products Gallery */
+        .products-section {
+            padding: 90px 0;
+            background: var(--white);
+        }
+
+        .products-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-header h3 {
+            font-size: 14px;
+            color: var(--gold);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 46px;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .product-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(26, 35, 50, 0.95), transparent);
+            color: var(--white);
+            padding: 30px 25px;
+            transform: translateY(10px);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-overlay {
+            transform: translateY(0);
+        }
+
+        .product-overlay h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-overlay p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
         }
 
         /* Features Section */
         .features {
             background: var(--navy);
             color: var(--white);
-            padding: 80px 0;
+            padding: 90px 0;
         }
 
         .features-container {
@@ -382,65 +598,52 @@
             padding: 0 40px;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .section-title p {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            margin-top: 60px;
         }
 
         .feature-card {
             text-align: center;
-            padding: 40px 30px;
+            padding: 45px 30px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s;
+            border-radius: 4px;
+            transition: all 0.4s;
         }
 
         .feature-card:hover {
             background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            border-color: var(--gold);
         }
 
         .feature-number {
-            font-size: 48px;
-            font-weight: 800;
+            font-size: 52px;
+            font-weight: 900;
             color: var(--gold);
             margin-bottom: 20px;
+            line-height: 1;
         }
 
         .feature-card h3 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .feature-card p {
             font-size: 15px;
             color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* Stats */
         .stats {
             background: var(--white);
-            padding: 70px 0;
+            padding: 80px 0;
         }
 
         .stats-container {
@@ -454,34 +657,48 @@
 
         .stat-item {
             text-align: center;
-            padding: 30px 20px;
-            border-right: 1px solid #e5e7eb;
+            padding: 35px 25px;
+            background: var(--light-gray);
+            border-radius: 4px;
+            transition: all 0.3s;
         }
 
-        .stat-item:last-child {
-            border-right: none;
+        .stat-item:hover {
+            background: var(--navy);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(26, 35, 50, 0.2);
+        }
+
+        .stat-item:hover .stat-value {
+            color: var(--gold);
+        }
+
+        .stat-item:hover .stat-label {
+            color: var(--white);
         }
 
         .stat-value {
-            font-size: 54px;
-            font-weight: 800;
+            font-size: 56px;
+            font-weight: 900;
             color: var(--navy);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: -1px;
+            transition: color 0.3s;
         }
 
         .stat-label {
             font-size: 13px;
             color: var(--gray);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            transition: color 0.3s;
         }
 
         /* Quality Section */
         .quality {
             background: var(--light-gray);
-            padding: 80px 0;
+            padding: 90px 0;
         }
 
         .quality-container {
@@ -494,44 +711,47 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 35px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
         .quality-card {
             background: var(--white);
-            padding: 45px 35px;
+            padding: 50px 35px;
             text-align: center;
-            border-top: 3px solid var(--gold);
-            transition: all 0.3s;
+            border-top: 4px solid var(--gold);
+            border-radius: 4px;
+            transition: all 0.4s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
         .quality-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.12);
         }
 
         .quality-icon {
-            font-size: 50px;
-            margin-bottom: 22px;
+            font-size: 56px;
+            margin-bottom: 25px;
         }
 
         .quality-card h3 {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: var(--navy);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .quality-card p {
             font-size: 14px;
             color: var(--gray);
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
             background: var(--navy);
             color: rgba(255, 255, 255, 0.7);
-            padding: 70px 0 35px;
+            padding: 80px 0 40px;
         }
 
         .footer-container {
@@ -544,22 +764,22 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 60px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .footer-about h3 {
             color: var(--white);
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 800;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         .footer-about p {
             font-size: 14px;
-            line-height: 1.7;
-            margin-bottom: 25px;
+            line-height: 1.8;
+            margin-bottom: 28px;
         }
 
         .footer-badges {
@@ -570,20 +790,21 @@
 
         .badge {
             background: rgba(255, 255, 255, 0.1);
-            padding: 6px 14px;
+            padding: 7px 15px;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             color: var(--gold);
+            border-radius: 2px;
         }
 
         .footer-column h4 {
             color: var(--white);
             font-size: 14px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         .footer-links {
@@ -591,7 +812,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .footer-links a {
@@ -606,99 +827,50 @@
         }
 
         .footer-bottom {
-            padding-top: 30px;
+            padding-top: 35px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             font-size: 13px;
         }
 
-        /* ========== RESPONSIVE DESIGN - ALL DEVICES ========== */
-
-        /* Large Desktop (1600px+) */
-        @media (min-width: 1600px) {
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1280px) {
             .hero-content h2 {
-                font-size: 72px;
+                font-size: 56px;
             }
             
-            .section-title h2 {
-                font-size: 48px;
-            }
-        }
-
-        /* Desktop & Laptop (1024px - 1440px) */
-        @media (max-width: 1440px) {
-            .header-content,
-            .nav-content,
-            .hero,
-            .features-container,
-            .stats-container,
-            .quality-container,
-            .footer-container {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-        }
-
-        /* Tablet Landscape & Small Laptop (1024px - 1280px) */
-        @media (max-width: 1280px) {
-            .hero {
+            .company-container {
                 gap: 60px;
             }
+        }
 
-            .hero-content h2 {
-                font-size: 52px;
+        @media (max-width: 1024px) {
+            .company-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .company-images {
+                order: -1;
             }
 
             .features-grid,
             .quality-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
 
-        /* Tablet Portrait & Small Screens (768px - 1024px) */
-        @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                padding: 60px 30px;
-            }
-
-            .hero-content h2 {
-                font-size: 48px;
-            }
-
-            .quote-form {
-                max-width: 600px;
-                margin: 0 auto;
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-            }
-
-            .stat-item {
-                border-right: none;
-                border-bottom: 1px solid #e5e7eb;
-                padding-bottom: 30px;
-            }
-
-            .stat-item:nth-child(2n) {
-                border-bottom: 1px solid #e5e7eb;
-            }
-
-            .stat-item:nth-last-child(-n+2) {
-                border-bottom: none;
-                padding-bottom: 30px;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 40px;
             }
         }
 
-        /* Mobile Landscape & Small Tablet (640px - 768px) */
         @media (max-width: 768px) {
             .header-content {
                 padding: 0 20px;
@@ -713,34 +885,12 @@
                 display: none;
             }
 
-            .iso-tag {
-                font-size: 10px;
-                padding: 3px 10px;
-            }
-
             .nav-content {
                 padding: 0 20px;
-                height: 65px;
+                height: 70px;
             }
 
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-
-            .logo-text h1 {
-                font-size: 14px;
-            }
-
-            .logo-text p {
-                font-size: 9px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
+            .nav-links,
             .cta-button {
                 display: none;
             }
@@ -749,62 +899,42 @@
                 display: block;
             }
 
-            .hero {
-                padding: 40px 20px;
-                gap: 40px;
+            .hero-section {
+                padding: 70px 0;
+            }
+
+            .hero-container {
+                padding: 0 20px;
             }
 
             .hero-content h2 {
-                font-size: 36px;
-                margin-bottom: 20px;
+                font-size: 40px;
             }
 
             .hero-description {
-                font-size: 16px;
-                margin-bottom: 30px;
-            }
-
-            .company-info-box {
-                padding: 25px 20px;
-            }
-
-            .info-row {
-                grid-template-columns: 100px 1fr;
-                gap: 15px;
-                padding-bottom: 12px;
-            }
-
-            .info-label {
-                font-size: 12px;
-            }
-
-            .info-value {
-                font-size: 13px;
+                font-size: 17px;
             }
 
             .hero-buttons {
                 flex-direction: column;
             }
 
-            .btn-primary,
-            .btn-secondary {
+            .btn-hero {
                 width: 100%;
                 text-align: center;
-                padding: 14px 30px;
             }
 
-            .quote-form {
-                padding: 30px 20px;
-            }
-
-            .form-header h3 {
-                font-size: 22px;
-            }
-
-            .features {
+            .company-section,
+            .quote-section,
+            .products-section,
+            .features,
+            .stats,
+            .quality {
                 padding: 60px 0;
             }
 
+            .company-container,
+            .products-container,
             .features-container,
             .stats-container,
             .quality-container,
@@ -812,161 +942,53 @@
                 padding: 0 20px;
             }
 
-            .section-title h2 {
-                font-size: 32px;
+            .quote-container {
+                padding: 0 20px;
             }
 
-            .section-title p {
-                font-size: 15px;
+            .quote-form {
+                padding: 35px 25px;
             }
 
+            .company-info-content h2,
+            .section-header h2 {
+                font-size: 34px;
+            }
+
+            .company-details-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .products-grid,
             .features-grid,
-            .quality-grid {
+            .quality-grid,
+            .stats-container {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
 
-            .feature-card,
-            .quality-card {
-                padding: 35px 25px;
-            }
-
-            .stats {
-                padding: 50px 0;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .stat-item {
-                border-right: none;
-                border-bottom: 1px solid #e5e7eb;
-                padding: 25px 20px;
-            }
-
-            .stat-item:last-child {
-                border-bottom: none;
-            }
-
-            .stat-value {
-                font-size: 44px;
-            }
-
-            .quality {
-                padding: 60px 0;
-            }
-
-            footer {
-                padding: 50px 0 30px;
-            }
-
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
-                margin-bottom: 35px;
-            }
-
-            .footer-bottom {
-                font-size: 12px;
+                gap: 40px;
             }
         }
 
-        /* Mobile Portrait (480px - 640px) */
-        @media (max-width: 640px) {
+        @media (max-width: 480px) {
             .hero-content h2 {
                 font-size: 32px;
             }
 
-            .section-title h2 {
+            .section-header h2 {
                 font-size: 28px;
             }
 
             .feature-number {
-                font-size: 40px;
-            }
-
-            .feature-card h3,
-            .quality-card h3 {
-                font-size: 18px;
+                font-size: 44px;
             }
 
             .stat-value {
-                font-size: 38px;
-            }
-        }
-
-        /* Small Mobile (320px - 480px) */
-        @media (max-width: 480px) {
-            .header-content {
-                flex-direction: column;
-                gap: 8px;
-                padding: 8px 15px;
-            }
-
-            .contact-info {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-content h2 {
-                font-size: 28px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            .company-info-box {
-                padding: 20px 15px;
-            }
-
-            .info-row {
-                grid-template-columns: 1fr;
-                gap: 5px;
-            }
-
-            .quote-form {
-                padding: 25px 15px;
-            }
-
-            .form-header h3 {
-                font-size: 20px;
-            }
-
-            .section-title h2 {
-                font-size: 26px;
-            }
-
-            .feature-card,
-            .quality-card {
-                padding: 30px 20px;
-            }
-
-            .stat-value {
-                font-size: 36px;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                padding: 12px 24px;
-                font-size: 14px;
-            }
-        }
-
-        /* Extra Small Mobile (up to 320px) */
-        @media (max-width: 360px) {
-            .hero-content h2 {
-                font-size: 26px;
-            }
-
-            .section-title h2 {
-                font-size: 24px;
-            }
-
-            .feature-number {
-                font-size: 36px;
+                font-size: 46px;
             }
         }
     </style>
@@ -976,8 +998,8 @@
     <header>
         <div class="header-content">
             <div class="contact-info">
-                <a href="tel:+917206104661">+91 7206104661</a>
-                <a href="mailto:sales@jaigurudevspunpipe.com">sales@jaigurudevspunpipe.com</a>
+                <a href="tel:+917206104661">📞 +91 7206104661</a>
+                <a href="mailto:sales@jaigurudevspunpipe.com">✉️ sales@jaigurudevspunpipe.com</a>
             </div>
             <div class="iso-tag">ISO 9001:2015 CERTIFIED</div>
         </div>
@@ -995,6 +1017,8 @@
             </div>
             <button class="mobile-menu-toggle">☰</button>
             <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#quality">Quality</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1004,78 +1028,108 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>We Make <span class="highlight">Spun Pipes</span> As Per Your Requirements</h2>
-            <p class="hero-description">ISO 9001:2015 certified manufacturer in Rewari. We make pipes in any size, any quantity based on your needs.</p>
-
-            <div class="company-info-box">
-                <div class="info-grid">
-                    <div class="info-row">
-                        <div class="info-label">Company</div>
-                        <div class="info-value">Jai Guru Dev Spun Pipe</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Owner</div>
-                        <div class="info-value">Ishwar Yadav</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Product</div>
-                        <div class="info-value">RCC Spun Pipes</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Location</div>
-                        <div class="info-value">Rewari, Haryana</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Certified</div>
-                        <div class="info-value">ISO 9001:2015, BIS</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Service Area</div>
-                        <div class="info-value">Delhi NCR, Haryana, Rajasthan</div>
-                    </div>
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>We Make <span class="highlight">Spun Pipes</span><br>As Per Your Requirements</h2>
+                <p class="hero-description">ISO 9001:2015 certified manufacturer in Rewari. We make high-quality RCC pipes in any size, any quantity based on your project needs.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+917206104661" class="btn-hero btn-hero-primary">Call: +91 7206104661</a>
+                    <a href="https://wa.me/917206104661" class="btn-hero btn-hero-secondary">WhatsApp Us</a>
                 </div>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="tel:+917206104661" class="btn-primary">Call: +91 7206104661</a>
-                <a href="https://wa.me/917206104661" class="btn-secondary">WhatsApp</a>
             </div>
         </div>
+    </section>
 
-        <!-- Quote Form -->
-        <div class="quote-form">
-            <div class="form-header">
-                <h3>Get Quote</h3>
-                <p>We'll contact you within 24 hours</p>
+    <!-- Info Strip -->
+    <div class="info-strip">
+        ✓ SINCE 2020 • SERVING DELHI NCR, HARYANA & RAJASTHAN • 500+ PROJECTS COMPLETED
+    </div>
+
+    <!-- Company Info with Images -->
+    <section class="company-section" id="about">
+        <div class="company-container">
+            <div class="company-images">
+                <div class="company-image large">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Spun Pipe Manufacturing">
+                </div>
+                <div class="company-image">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80" alt="RCC Pipes Stack">
+                </div>
+                <div class="company-image">
+                    <img src="https://images.unsplash.com/photo-1590674899330-089c94d3189b?w=600&q=80" alt="Concrete Manufacturing">
+                </div>
             </div>
 
-            <form onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label class="form-label">Name *</label>
-                    <input type="text" class="form-input" required placeholder="Your name">
+            <div class="company-info-content">
+                <h3>About Us</h3>
+                <h2>Premium Quality Spun Pipes Since 2020</h2>
+                <p>We are an ISO 9001:2015 certified manufacturer of RCC Spun Pipes based in Rewari, Haryana. Under the leadership of Ishwar Yadav, we deliver high-quality pipes for drainage, sewerage, and irrigation projects across North India.</p>
+
+                <div class="company-details-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">Company</div>
+                        <div class="detail-value">Jai Guru Dev Spun Pipe</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Owner</div>
+                        <div class="detail-value">Ishwar Yadav</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Product</div>
+                        <div class="detail-value">RCC Spun Pipes</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Location</div>
+                        <div class="detail-value">Rewari, Haryana</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Certified</div>
+                        <div class="detail-value">ISO 9001:2015, BIS</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Service Area</div>
+                        <div class="detail-value">Delhi NCR, HR, RJ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery -->
+    <section class="products-section" id="products">
+        <div class="products-container">
+            <div class="section-header">
+                <h3>Our Products</h3>
+                <h2>High Quality Spun Pipes</h2>
+                <p>We manufacture RCC spun pipes in various sizes and specifications for different applications</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1590674899330-089c94d3189b?w=600&q=80" alt="RCC Spun Pipes">
+                    <div class="product-overlay">
+                        <h4>RCC Spun Pipes</h4>
+                        <p>150mm to 2400mm diameter</p>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Phone *</label>
-                    <input type="tel" class="form-input" required placeholder="+91 7206104661">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80" alt="Hume Pipes">
+                    <div class="product-overlay">
+                        <h4>Hume Pipes</h4>
+                        <p>NP2, NP3, NP4 Class</p>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" placeholder="your@email.com">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Custom Size Pipes">
+                    <div class="product-overlay">
+                        <h4>Custom Sizes</h4>
+                        <p>Made as per your specs</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label">Requirements *</label>
-                    <textarea class="form-input" required placeholder="Pipe diameter, quantity, delivery location"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Send Enquiry</button>
-
-                <p class="form-note">We'll call you with pricing and delivery details.</p>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -1101,37 +1155,76 @@
         </div>
     </section>
 
+    <!-- Quote Form -->
+    <section class="quote-section" id="quote">
+        <div class="quote-container">
+            <div class="quote-form">
+                <div class="form-header">
+                    <h3>Get Quote</h3>
+                    <p>Tell us your requirements. We'll contact you within 24 hours with pricing details.</p>
+                </div>
+
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Your Name *</label>
+                        <input type="text" class="form-input" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number *</label>
+                        <input type="tel" class="form-input" required placeholder="+91 7206104661">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Requirements *</label>
+                        <textarea class="form-input" required placeholder="Tell us:&#10;• Pipe diameter needed&#10;• Quantity required&#10;• Delivery location&#10;• Any special requirements"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Enquiry</button>
+
+                    <p class="form-note">We'll call you back with detailed pricing and delivery information</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Features -->
     <section class="features" id="services">
         <div class="features-container">
-            <div class="section-title">
-                <h2>What We Do</h2>
-                <p>We make spun pipes based on your requirements</p>
+            <div class="section-header">
+                <h3 style="color: var(--gold);">What We Do</h3>
+                <h2 style="color: var(--white);">Made to Order Manufacturing</h2>
+                <p style="color: rgba(255,255,255,0.8);">We make spun pipes based on your exact requirements</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-number">01</div>
                     <h3>Custom Manufacturing</h3>
-                    <p>Any diameter (150mm to 2400mm) and any length you need</p>
+                    <p>Any diameter (150mm to 2400mm) and any length you need for your project</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-number">02</div>
                     <h3>Made to Order</h3>
-                    <p>Fresh manufacturing based on your specifications</p>
+                    <p>Fresh manufacturing based on your specifications. No stock items</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-number">03</div>
                     <h3>Quality Certified</h3>
-                    <p>ISO 9001:2015, BIS approved, ISI marked</p>
+                    <p>ISO 9001:2015, BIS approved, ISI marked products</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-number">04</div>
                     <h3>Any Quantity</h3>
-                    <p>From small to large orders - all sizes welcome</p>
+                    <p>From small to large orders - we handle all sizes</p>
                 </div>
 
                 <div class="feature-card">
@@ -1152,16 +1245,17 @@
     <!-- Quality -->
     <section class="quality" id="quality">
         <div class="quality-container">
-            <div class="section-title">
-                <h2 style="color: var(--navy);">Certified Quality</h2>
-                <p style="color: var(--gray);">All pipes meet national and international standards</p>
+            <div class="section-header">
+                <h3>Quality Standards</h3>
+                <h2 style="color: var(--navy);">Certified Excellence</h2>
+                <p style="color: var(--gray);">All our pipes meet national and international quality standards</p>
             </div>
 
             <div class="quality-grid">
                 <div class="quality-card">
                     <div class="quality-icon">🏆</div>
                     <h3>ISO 9001:2015</h3>
-                    <p>Quality Management Certified</p>
+                    <p>Quality Management System Certified</p>
                 </div>
 
                 <div class="quality-card">
@@ -1173,7 +1267,7 @@
                 <div class="quality-card">
                     <div class="quality-icon">📋</div>
                     <h3>ISI Marked</h3>
-                    <p>All Products Certified</p>
+                    <p>All Products ISI Certified</p>
                 </div>
 
                 <div class="quality-card">
@@ -1191,7 +1285,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>Jai Guru Dev Spun Pipe</h3>
-                    <p>ISO 9001:2015 certified manufacturer in Rewari. We make spun pipes as per your requirements. Serving Delhi NCR, Haryana, and Rajasthan since 2020.</p>
+                    <p>ISO 9001:2015 certified RCC Spun Pipe manufacturer in Rewari. We make pipes as per your requirements. Serving Delhi NCR, Haryana, and Rajasthan since 2020.</p>
                     <div class="footer-badges">
                         <span class="badge">ISO 9001:2015</span>
                         <span class="badge">BIS CERTIFIED</span>
@@ -1230,7 +1324,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Jai Guru Dev Spun Pipe. All rights reserved. | ISO 9001:2015 Certified</p>
+                <p>© 2026 Jai Guru Dev Spun Pipe. All rights reserved. | ISO 9001:2015 Certified Manufacturer</p>
             </div>
         </div>
     </footer>
@@ -1238,16 +1332,17 @@
     <script>
         function handleSubmit(e) {
             e.preventDefault();
-            alert('Thank you! We received your enquiry. Our team will call you within 24 hours.');
+            alert('Thank you! We received your enquiry. Our team will call you within 24 hours with pricing and delivery details.');
             e.target.reset();
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
     </script>
