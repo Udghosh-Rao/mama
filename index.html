@@ -54,17 +54,6 @@
             color: #d4af37;
         }
 
-        .iso-badge {
-            background: linear-gradient(135deg, #b8962d, #d4af37);
-            color: #0a0f1a;
-            padding: 6px clamp(10px, 2vw, 18px);
-            border-radius: 3px;
-            font-weight: 800;
-            font-size: clamp(9px, 1.5vw, 11px);
-            letter-spacing: 1.5px;
-            white-space: nowrap;
-        }
-
         /* Navigation */
         .main-nav {
             background: white;
@@ -568,53 +557,6 @@
             color: rgba(255,255,255,0.85);
         }
 
-        /* Quality Section */
-        .quality-section {
-            background: linear-gradient(180deg, #f9fafb, #fff);
-            padding: clamp(50px, 10vw, 100px) 0;
-        }
-
-        .quality-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 clamp(15px, 3vw, 40px);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: clamp(20px, 3vw, 30px);
-        }
-
-        .quality-card {
-            background: white;
-            padding: clamp(30px, 5vw, 50px) clamp(20px, 3vw, 30px);
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border-top: 5px solid #d4af37;
-            transition: all 0.3s ease;
-        }
-
-        .quality-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .quality-icon {
-            font-size: clamp(48px, 8vw, 64px);
-            margin-bottom: clamp(15px, 3vw, 25px);
-        }
-
-        .quality-card h3 {
-            font-size: clamp(16px, 2.5vw, 20px);
-            font-weight: 700;
-            color: #1a2332;
-            margin-bottom: 10px;
-        }
-
-        .quality-card p {
-            font-size: clamp(12px, 2vw, 14px);
-            color: #6b7280;
-        }
-
         /* Footer */
         .main-footer {
             background: linear-gradient(180deg, #0a0f1a, #141b2d);
@@ -648,23 +590,6 @@
             line-height: 1.9;
             margin-bottom: clamp(20px, 3vw, 30px);
             color: rgba(255,255,255,0.75);
-        }
-
-        .footer-badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .footer-badge {
-            background: rgba(212,175,55,0.15);
-            padding: 10px clamp(12px, 2vw, 18px);
-            font-size: clamp(9px, 1.5vw, 11px);
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #d4af37;
-            border-radius: 4px;
-            border: 1px solid rgba(212,175,55,0.25);
         }
 
         .footer-column h4 {
@@ -763,10 +688,6 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .quality-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -783,10 +704,6 @@
             
             .features-grid {
                 grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .quality-grid {
-                grid-template-columns: repeat(4, 1fr);
             }
             
             .stats-container {
@@ -810,15 +727,13 @@
             }
             
             .features-section,
-            .quality-section,
             .products-section {
                 padding: 50px 0;
             }
         }
 
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-            .logo-icon,
-            .quality-icon {
+            .logo-icon {
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
@@ -870,7 +785,6 @@
                 <a href="tel:+917206104661" class="top-bar-item">📞 +91 7206104661</a>
                 <a href="mailto:sales@jaigurudevspunpipe.com" class="top-bar-item">✉️ sales@jaigurudevspunpipe.com</a>
             </div>
-            <div class="iso-badge">Best Quality</div>
         </div>
     </div>
 
@@ -888,7 +802,6 @@
             <ul class="nav-links">
                 <li><a href="#products">Products</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#quality">Quality</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
@@ -921,10 +834,6 @@
                         <div class="info-row">
                             <div class="info-label">Location</div>
                             <div class="info-value">Rewari, Haryana</div>
-                        </div>
-                        <div class="info-row">
-                            <div class="info-label">Certified</div>
-                            <div class="info-value">ISO 9001:2015, BIS</div>
                         </div>
                         <div class="info-row">
                             <div class="info-label">Service Area</div>
@@ -997,7 +906,7 @@
         </div>
     </section>
 
-    <!-- Products Gallery - WITH YOUR WORKING IMAGES -->
+    <!-- Products Gallery -->
     <section class="products-section" id="products">
         <div class="section-header">
             <div class="section-label">Our Products</div>
@@ -1006,30 +915,30 @@
         </div>
 
         <div class="products-grid">
-            <!-- Product 1 - YOUR IMAGE 1 -->
+            <!-- Product 1 -->
             <div class="product-card">
                 <img src="https://i.ibb.co/RTY09Xqj/demo-1.jpg" alt="RCC Spun Pipes Manufacturing" class="product-image">
                 <div class="product-content">
                     <h3>RCC Spun Pipes</h3>
-                    <p>High-quality reinforced cement concrete pipes manufactured to IS specifications with NP2 and NP3 grade options.</p>
+                    <p>High-quality reinforced cement concrete pipes manufactured with NP2 and NP3 grade options for all your construction needs.</p>
                 </div>
             </div>
 
-            <!-- Product 2 - YOUR IMAGE 2 -->
+            <!-- Product 2 -->
             <div class="product-card">
                 <img src="https://i.ibb.co/NgLQmS34/demo-2.jpg" alt="Spun Pipe Production Facility" class="product-image">
                 <div class="product-content">
                     <h3>Custom Manufacturing</h3>
-                    <p>Made-to-order production facility capable of manufacturing pipes in any diameter from 300mm to 2000mm.</p>
+                    <p>Made-to-order production facility capable of manufacturing pipes in any diameter from 300mm to 2000mm as per your specifications.</p>
                 </div>
             </div>
 
-            <!-- Product 3 - YOUR IMAGE 3 -->
+            <!-- Product 3 -->
             <div class="product-card">
                 <img src="https://i.ibb.co/5XTk4Z1D/Spun-pipe-demo.jpg" alt="Quality Spun Pipes Ready for Delivery" class="product-image">
                 <div class="product-content">
                     <h3>Ready for Delivery</h3>
-                    <p>ISO 9001:2015 certified pipes, ISI marked, lab tested and ready for immediate site delivery across NCR region.</p>
+                    <p>Quality tested pipes ready for immediate site delivery across Delhi NCR, Haryana and Rajasthan regions.</p>
                 </div>
             </div>
         </div>
@@ -1058,8 +967,8 @@
 
             <div class="feature-card">
                 <div class="feature-number">03</div>
-                <h3>Quality Certified</h3>
-                <p>ISO 9001:2015, BIS approved, ISI marked</p>
+                <h3>Quality Testing</h3>
+                <p>Every batch professionally tested</p>
             </div>
 
             <div class="feature-card">
@@ -1082,53 +991,13 @@
         </div>
     </section>
 
-    <!-- Quality -->
-    <section class="quality-section" id="quality">
-        <div class="section-header">
-            <div class="section-label">Quality Standards</div>
-            <h2>Certified Excellence</h2>
-            <p>All pipes meet national and international standards</p>
-        </div>
-
-        <div class="quality-grid">
-            <div class="quality-card">
-                <div class="quality-icon">🏆</div>
-                <h3>ISO 9001:2015</h3>
-                <p>Quality Management Certified</p>
-            </div>
-
-            <div class="quality-card">
-                <div class="quality-icon">✓</div>
-                <h3>BIS Approved</h3>
-                <p>Bureau of Indian Standards</p>
-            </div>
-
-            <div class="quality-card">
-                <div class="quality-icon">📋</div>
-                <h3>ISI Marked</h3>
-                <p>All Products Certified</p>
-            </div>
-
-            <div class="quality-card">
-                <div class="quality-icon">🔬</div>
-                <h3>Lab Tested</h3>
-                <p>Every Batch Quality Tested</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="main-footer" id="contact">
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>Jai Gurudev Spun Pipe Udyog</h3>
-                    <p>ISO 9001:2015 certified manufacturer in Rewari. We make spun pipes as per your requirements. Serving Delhi NCR, Haryana, and Rajasthan since 2010.</p>
-                    <div class="footer-badges">
-                        <span class="footer-badge">ISO 9001:2015</span>
-                        <span class="footer-badge">BIS CERTIFIED</span>
-                        <span class="footer-badge">ISI MARKED</span>
-                    </div>
+                    <p>Premium manufacturer in Rewari. We make spun pipes as per your requirements. Serving Delhi NCR, Haryana, and Rajasthan since 2010.</p>
                 </div>
 
                 <div class="footer-column">
@@ -1162,7 +1031,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Jai Gurudev Spun Pipe Udyog. All rights reserved. | ISO 9001:2015 Certified Manufacturer</p>
+                <p>© 2026 Jai Gurudev Spun Pipe Udyog. All rights reserved. | Premium RCC Spun Pipe Manufacturer</p>
             </div>
         </div>
     </footer>
