@@ -426,6 +426,59 @@
             color: white;
         }
 
+        /* Products Gallery Section - NEW */
+        .products-section {
+            background: linear-gradient(180deg, #fff, #f9fafb);
+            padding: clamp(50px, 10vw, 100px) 0;
+        }
+
+        .products-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 clamp(15px, 3vw, 40px);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: clamp(25px, 4vw, 40px);
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: clamp(250px, 30vw, 350px);
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-content {
+            padding: clamp(20px, 4vw, 30px);
+        }
+
+        .product-content h3 {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 700;
+            color: #1a2332;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .product-content p {
+            font-size: clamp(14px, 2.2vw, 16px);
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
         /* Features Section */
         .features-section {
             background: linear-gradient(180deg, #0a0f1a, #1a2332);
@@ -696,6 +749,10 @@
             .btn {
                 width: 100%;
             }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Medium devices (tablets, 600px to 1023px) */
@@ -713,6 +770,10 @@
             }
             
             .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -734,6 +795,10 @@
             .stats-container {
                 grid-template-columns: repeat(4, 1fr);
             }
+
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         /* Extra large devices (large desktops, 1400px and up) */
@@ -750,7 +815,8 @@
             }
             
             .features-section,
-            .quality-section {
+            .quality-section,
+            .products-section {
                 padding: 50px 0;
             }
         }
@@ -790,17 +856,12 @@
             }
         }
 
-        /* Dark mode support */
-        @media (prefers-color-scheme: dark) {
-            /* Keep the design as is, since it already has dark sections */
-        }
-
         /* Touch device optimizations */
         @media (hover: none) and (pointer: coarse) {
             .btn,
             .submit-btn,
             .form-input {
-                min-height: 44px; /* iOS recommended touch target */
+                min-height: 44px;
             }
             
             .nav-links a,
@@ -834,6 +895,7 @@
             </a>
             
             <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#quality">Quality</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -940,6 +1002,44 @@
             <div class="stat-item">
                 <div class="stat-value">15+</div>
                 <div class="stat-label">Years</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Gallery - NEW SECTION WITH YOUR PHOTOS -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <div class="section-label">Our Products</div>
+            <h2>Premium Quality Spun Pipes</h2>
+            <p>Manufactured with precision and delivered with care</p>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 - Your First Image -->
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=19PYgEDKV_sg37JX5GvZXp3Z0Bi2dJ-Tt" alt="RCC Spun Pipes Manufacturing" class="product-image">
+                <div class="product-content">
+                    <h3>RCC Spun Pipes</h3>
+                    <p>High-quality reinforced cement concrete pipes manufactured to IS specifications with NP2 and NP3 grade options.</p>
+                </div>
+            </div>
+
+            <!-- Product 2 - Your Second Image -->
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=1iUert8gI0MBIsJAqnzu1xunYyubgbK0g" alt="Spun Pipe Production Facility" class="product-image">
+                <div class="product-content">
+                    <h3>Custom Manufacturing</h3>
+                    <p>Made-to-order production facility capable of manufacturing pipes in any diameter from 300mm to 2000mm.</p>
+                </div>
+            </div>
+
+            <!-- Product 3 - Your Third Image -->
+            <div class="product-card">
+                <img src="https://drive.google.com/uc?export=view&id=13mAE6BBJ_wmZ4jZmnf40V4b-UmjgHdqe" alt="Quality Spun Pipes Ready for Delivery" class="product-image">
+                <div class="product-content">
+                    <h3>Ready for Delivery</h3>
+                    <p>ISO 9001:2015 certified pipes, ISI marked, lab tested and ready for immediate site delivery across NCR region.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1077,23 +1177,20 @@
     </footer>
 
     <script>
-        // FREE WhatsApp Form Integration - Works with Normal or Business WhatsApp
+        // FREE WhatsApp Form Integration
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim() || 'Not provided';
             const requirements = document.getElementById('requirements').value.trim();
             
-            // Validate required fields
             if (!name || !phone || !requirements) {
                 alert('❌ Please fill all required fields!');
                 return;
             }
             
-            // Create WhatsApp message (URL encoded)
             const message = encodeURIComponent(
                 `🔔 *New Quote Request - Jai Gurudev Spun Pipe*\n\n` +
                 `👤 *Name:* ${name}\n` +
@@ -1103,21 +1200,15 @@
                 `_Sent from website form_`
             );
             
-            // Your WhatsApp number (works with NORMAL or BUSINESS WhatsApp)
-            const whatsappNumber = '917206104661'; // Format: country code + number (no + or spaces)
+            const whatsappNumber = '917206104661';
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
             
-            // Open WhatsApp in new tab
             window.open(whatsappURL, '_blank');
-            
-            // Show success message
             alert('✅ Opening WhatsApp... Please click SEND in WhatsApp to complete your enquiry!');
-            
-            // Reset form
             this.reset();
         });
 
-        // Mobile menu toggle function
+        // Mobile menu toggle
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             if (navLinks.style.display === 'flex') {
@@ -1162,7 +1253,7 @@
             }
         });
 
-        // Smooth scroll for navigation links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1172,7 +1263,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     if (window.innerWidth < 600) {
                         document.querySelector('.nav-links').style.display = 'none';
                     }
